@@ -8,4 +8,4 @@
 :HL["/_next/static/media/sponsor-4-light.25c6c9b7.webp","image"]
 :HL["/_next/static/media/sponsor-5-light.32af79b4.webp","image"]
 :HL["/_next/static/media/sponsor-6-light.31d2e18c.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":0,"slots":{"children":{"name":"lang","param":{"type":"d","key":"es","siblings":null},"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"K6VR732gpq_fsBAwoT8oZ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":0,"slots":{"children":{"name":"lang","param":{"type":"d","key":"es","siblings":null},"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"GLU66CLvnQZuCpOsokUIq"}

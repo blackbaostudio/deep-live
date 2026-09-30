@@ -1,0 +1,34 @@
+# Ships inside out/ so `make deploy-live` pushes it to deep-live's gh-pages branch, where it publishes the site.
+# It replaces GitHub's managed "pages-build-deployment" workflow, whose pinned actions ran on deprecated Node 20; Pages build_type is "workflow".
+# upload-pages-artifact always excludes .git and .github, so this file is never served.
+# include-hidden-files keeps every other dotfile published: email-signature/.bak/ is served today and live signatures must never lose a URL.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+          include-hidden-files: true
+      - id: deployment
+        uses: actions/deploy-pages@v5
